@@ -5,7 +5,7 @@ package ua.hillelit.lms;
  */
 public class ServerApp {
   public static void main(String[] args) {
-    MyServer server = new MyServer();
+    Server server = new Server();
     server.start(8080);
   }
 
