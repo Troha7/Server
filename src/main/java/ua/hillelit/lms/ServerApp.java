@@ -1,7 +1,9 @@
 package ua.hillelit.lms;
 
 /**
- * @author Dmytro Trotsenko on 13.12.2022
+ * {@link ServerApp} is a main class.
+ *
+ * @author Dmytro Trotsenko on 26.12.2022
  */
 public class ServerApp {
   public static void main(String[] args) {

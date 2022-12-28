@@ -21,10 +21,22 @@ public class ClientHandler extends Thread {
     this.clients = clients;
   }
 
+  /**
+   * Sends a message to the client.
+   *
+   * @param message text message
+   */
   public void send(String message) {
     notifier.write(message);
   }
 
+  /**
+   * Run the new thread for a new client.
+   * Add new client to the list {@link List<ClientHandler> clients}, when he connected to server
+   * and remove the client when he disconnected.
+   * Send the message to client at the class {@link Notifier}.
+   * Get the message and data at the class {@link Observer}.
+   */
   @Override
   public void run() {
     try {
@@ -38,7 +50,6 @@ public class ClientHandler extends Thread {
       observer.read(clientName);
 
       closeClientSocket(clientName);
-
       clients.remove(this);
 
     } catch (Exception e) {
@@ -46,6 +57,12 @@ public class ClientHandler extends Thread {
     }
   }
 
+  /**
+   * Close the client socket.
+   *
+   * @param clientName client name
+   * @throws IOException
+   */
   private void closeClientSocket(String clientName) throws IOException {
     notifier.close();
     observer.close();

@@ -9,7 +9,7 @@ import java.util.List;
  * {@link Server} is a class simple multiple client's server,
  * which has the capacity to service many clients and many requests simultaneously.
  *
- * @author Dmytro Trotsenko on 12.12.2022
+ * @author Dmytro Trotsenko on 26.12.2022
  */
 public class Server {
 
